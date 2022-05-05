@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：Element_UI_Steps
+  File name(文件名): test1
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/5/5
+  Time(创建时间)： 21:02
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/element-ui.css">
+    <script src="js/vue.js"></script>
+    <script src="js/element-ui.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<div id="app">
+
+    <el-steps :active="active" finish-status="success">
+        <el-step title="步骤1"></el-step>
+        <el-step title="步骤2"></el-step>
+        <el-step title="步骤3"></el-step>
+        <el-step title="步骤4"></el-step>
+        <el-step title="步骤5"></el-step>
+        <el-step title="步骤6"></el-step>
+        <el-step title="步骤7"></el-step>
+        <el-step title="步骤8"></el-step>
+        <el-step title="步骤9"></el-step>
+    </el-steps>
+
+    <el-button style="margin-top: 12px;" @click="next">下一步</el-button>
+
+</div>
+
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            active: 0
+        },
+        methods: {
+            next()
+            {
+                if (this.active++ > 8)
+                {
+                    this.active = 0;
+                }
+            }
+        },
+        mounted()
+        {
+
+        }
+    })
+</script>
+</body>
+</html>
